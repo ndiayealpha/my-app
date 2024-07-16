@@ -1,5 +1,6 @@
 import React from 'react'
 import AchatHorizontalSIdeBar from '../../organism/HorizontalSideBar/AchatHorizontalSideBar';
+import EmptyBonScreen from '../../organism/EmptyBonScreen/EmptyBonScreen';
 
 const PageAchat2 = () => {
     const data = [
@@ -25,7 +26,7 @@ const PageAchat2 = () => {
             <div>
                 <AchatHorizontalSIdeBar />
             </div>
-            <div className='mt-10'>
+           {true ? <div className='mt-10'>
             <table className='w-full centered-table'>
                     <thead>
                         <tr>
@@ -43,7 +44,7 @@ const PageAchat2 = () => {
                         <tr key={item.id}>
                             <td>{item.id}</td>
                             <td>{item.name}</td>
-                            <td>{item.age}</td>
+                            <td> <div ><span>{item.age}</span></div> </td>
                             <td>{item.email}</td>
                             <td>{item.fournisseur}</td>
                             <td>{item.DatedeEnvoie}</td>
@@ -53,7 +54,10 @@ const PageAchat2 = () => {
                         ))}
                     </tbody>
                     </table>
-            </div>
+            </div> : <div className='h-screen flex pt-20 justify-center'>
+                       <EmptyBonScreen />
+                     </div>}
+         
         </div>
     )
 }

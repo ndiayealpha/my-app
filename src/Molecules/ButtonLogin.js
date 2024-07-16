@@ -2,7 +2,7 @@ import React from "react";
 
 const ButtonLogin = (props) => {
     return (
-        <button className={props.buttonStyle || 'button_Login'}>
+        <button onClick={() => props.onClickButton()} className={props.buttonStyle || 'button_Login'}>
              {props.texte}
         </button>
     )

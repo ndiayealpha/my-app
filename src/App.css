@@ -13,7 +13,7 @@
   }
 }
 
-.centered-table {
+.centered-table, .listed-product {
   width: 100%;
   border-collapse: collapse;
 }
@@ -26,26 +26,70 @@
   text-align: center; /* Center align text in header and body cells */
 }
 
-.centered-table tr {
-  margin-block: 15px  !important;
+ .listed-product th, .listed-product td {
+  font-size: 12px;
+  font-weight: 500;
+  color: black;
+  padding: 8px;
+  text-align: center; /* Center align text in header and body cells */
 }
 
-.centered-table td:nth-child(3) { 
+
+.add_bon {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ background-color: white;
+ padding: 10px;
+ border-radius: 8px;
+ width: 409px;
+ height: 374px;
+ 
+}
+
+.add_bon .chart_block {
+  background-color: rgba(207, 235, 216, 1);
+  width: 155px;
+  height: 155px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 80px;
+}
+
+.add_bon div span {
+  color: rgba(113, 113, 113, 1);
+  font-size: 17px;
+  font-weight: 500;
+}
+.centered-table td:nth-child(3) div { 
   background-color: rgba(220, 225, 221, 1);
-  width: 74px;
   border-radius: 10px;
-  height: 20px;
-}
-
-.table-row td {
- margin-block: 10px;
+  padding: 7px;
 }
 
 .centered-table thead {
   border-bottom: 1px solid rgba(230, 230, 230, 1);
   margin-bottom: 10px;
 }
+
+.listed-product thead {
+  margin-bottom: 10px;
+}
+
 .centered-table th {
+  padding-top: 18px;
+  background-color: black;
+  padding-bottom: 18px;
+  font-weight: 500; 
+  font-size: 14px;
+  background-color: #f2f2f2;
+  color: rgba(129, 129, 129, 1);
+}
+
+.listed-product th {
   padding-top: 18px;
   background-color: black;
   padding-bottom: 18px;
@@ -274,6 +318,32 @@
   margin-block: 10px;
 }
 
+
+.button_valider {
+  background-color: rgba(2, 135, 45, 1);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  width: 155px;
+  height: 43px;
+  border: none;
+  border-radius: 5px;
+  margin-block: 10px;
+}
+
+
+.button_cancel {
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  width: 155px;
+  height: 43px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-block: 10px;
+}
+
 .horizontal_menu {
   padding-inline: 20px;
   padding-block: 15px;
@@ -368,6 +438,18 @@
   margin-block: 10px;
 }
 
+.button_order {
+  width: 210px;
+  height: 47px;
+  background-color: rgba(203, 47, 67, 1);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  margin-block: 10px;
+}
+
 .text-24-b {
   font-size: 24px;
   font-weight: bold;
@@ -388,6 +470,74 @@
   margin-top: 10px;
 }
 /* input */
+
+.card >div {
+  width: 605px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  margin-block: 10px;
+}
+
+.card p {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(39, 36, 36, 1);
+}
+
+.card span {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(100, 100, 100, 1);
+}
+
+.input_style {
+  width: 254px;
+  border: 1px solid rgba(217, 217, 217, 1);
+  height: 41px;
+  padding-left: 10px;
+  border-radius: 7px;
+  margin-top: 5px;
+}
+
+.input_date_style {
+  width: 134px;
+  border: 1px solid rgba(217, 217, 217, 1);
+  height: 41px;
+  padding-left: 10px;
+  border-radius: 7px;
+  margin-top: 5px;
+}
+
+.input_area_style {
+  width: 562px;
+  border: 1px solid rgba(217, 217, 217, 1);
+  min-height: 85px;
+  padding-left: 10px;
+  border-radius: 7px;
+  margin-top: 5px;
+}
+
+.input_calendar_container {
+  position: relative;
+  width: fit-content;
+}
+
+.input_calendar_container .icon_date {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.input_container {
+  width: fit-content;
+  position: relative;
+}
+.input_container span {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+}
 
 .bloc-center {
   display: flex;

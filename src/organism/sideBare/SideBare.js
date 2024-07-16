@@ -2,49 +2,51 @@ import React from "react";
 import logo from "../../Assets/logo.svg"
 import profile from '../../Assets/Maskgroup.svg'
 import Icon from "../../Molecules/Icon";
+import { useNavigate } from "react-router-dom";
 const SideBar = () => {
+    const navigate = useNavigate()
     return (
         <div className="sidebare-contenainer" style={{width: 195, height: window.innerHeight, backgroundColor: 'rgba(2, 135, 45, 1)'}}>
               
              <div className="sidebare-content">
              <img src={logo} />
                 <div className=" menu-lists">
-                    <div className="mt-5">
+                    <div className="mt-5" onClick={() => navigate('home-page')}>
                         <Icon size={24} icon={'Document'} />
                         <span>
                            Produtos
                         </span>
                     </div>
 
-                    <div className="mt-5">
+                    <div className="mt-5" onClick={() => navigate('page-achat')}>
                     <Icon size={24} icon={'Activity'} />
                         <span>
-                           Produtos
+                           Page achat
                         </span>
                     </div>
 
-                    <div className="mt-5">
+                    <div className="mt-5" onClick={() => navigate('ajouter_bon')}>
+                    <Icon size={24} icon={'Folder'} />
+                        <span>
+                           Commandes
+                        </span>
+                    </div>
+
+                    <div className="mt-5" onClick={() => navigate('Ajout_produits')}>
                     <Icon size={24} icon={'Notification'} />
                         <span>
                            Produtos
                         </span>
                     </div>
 
-                    <div className="mt-5">
-                    <Icon size={24} icon={'Folder'} />
-                        <span>
-                           Produtos
-                        </span>
-                    </div>
-
-                    <div className="mt-5">
+                    <div className="mt-5" onClick={() => navigate('page-achat2')}>
                     <Icon size={24} icon={'chart'} />
                         <span>
                            Produtos
                         </span>
                     </div>
 
-                    <div className="mt-5">
+                    <div className="mt-5" onClick={() => navigate('page-achat')}>
                     <Icon size={24} icon={'help'} />
                         <span>
                            Produtos

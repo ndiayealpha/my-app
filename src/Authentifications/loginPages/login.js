@@ -3,7 +3,9 @@ import loginimageSvg from '../../Assets/Image-BG.svg'
 import logo from '../../Assets/logo.svg'
 import TextInputs from "../../Molecules/TextInput";
 import ButtonLogin from "../../Molecules/ButtonLogin";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
+   const navigate = useNavigate()
     const divStyle = {
         position: 'relative',
         width: '100%', // Adjust as needed
@@ -23,6 +25,10 @@ const Login = () => {
         height: '100%',
         zIndex: -1,
       };
+
+   const signIn = () => {
+      navigate('home-page')
+   }
     return (
         <div className="background">
              
@@ -39,7 +45,7 @@ const Login = () => {
                    <TextInputs label={'E-mail'} label2={''} />
                    <TextInputs label={'Senha'} label2={'Palavra-chave esquecida ?'} />
 
-                   <ButtonLogin />
+                   <ButtonLogin onClickButton={signIn} />
                 </div>
              </div>
         </div>
